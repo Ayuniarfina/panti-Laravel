@@ -1,5 +1,9 @@
 <?php
 
-Route::get('/', 'UserPantiController@index');
-Route::get('/userPanti/create', 'UserPantiController@create');
-Route::post('/userPanti', 'UserPantiController@store');
+Route::get('/', 'Auth\RegisterController@index');
+Route::get('/userPanti/create', 'Auth\RegisterController@create');
+Route::post('/userPanti', 'Auth\RegisterController@store');
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
