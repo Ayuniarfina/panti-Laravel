@@ -18,8 +18,13 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->rememberToken();
+            $table->integer('role_id')->unsigned();
+            $table->boolean('seen')->default(false);
+            $table->boolean('valid')->default(false);
+            $table->boolean('confirmed')->default(false);
+            $table->string('confirmation_code')->nullable();
             $table->timestamps();
+            $table->rememberToken();
         });
     }
 
