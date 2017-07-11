@@ -12,7 +12,6 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 //Route::post('logout', 'Auth\LoginController@logout');
 
-	<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -78,4 +77,4 @@ Route::get('/tasks/{task}', function ($id) {
 });
 //Home
 use App\Panti;
-Route::get('/home', 'HomeController')->name('home');
+Route::get('/', 'HomeController')->name('home');
