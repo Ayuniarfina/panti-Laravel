@@ -23,6 +23,7 @@ class CreateUserPantisTable extends Migration
         $table->string('jml_penghuni');
         $table->string('nama_pemilik');
         $table->string('kontak_panti');
+        $table->string('foto');
         $table->boolean('dilihat')->default(false);
         $table->boolean('valid')->default(false);
         $table->boolean('confirmed')->default(false);

@@ -5,6 +5,7 @@
           <div class="col-lg-6 col-centered">
             <div class="well bs-component">
 		<form class="form-horizontal">
+      <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 		  <fieldset>
 		    <legend>Register Panti</legend>
 		    <div class="form-group">
@@ -64,8 +65,8 @@
 
         <div class="form-group">
 		      <div class="col-lg-10 col-lg-offset-2">
-		        <a routerLink="register">Register</a>
-		        <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Register</button>
+		        <a routerLink="register">Login</a>
 		      </div>
 		    </div>
 
