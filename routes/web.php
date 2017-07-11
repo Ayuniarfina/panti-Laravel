@@ -12,7 +12,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::post('logout', 'Auth\LoginController@logout');
 
-Route::get('/register', function () {
+/*Route::get('/register', function () {
 	$users = DB::table('users')->get();
     return view('auth.register',compact('users'));
 });
@@ -53,3 +53,4 @@ Route::get('/tasks/{task}', function ($id) {
 	$task = Task::find($id);
     return view('tasks.show',compact('task'));
 });
+*/

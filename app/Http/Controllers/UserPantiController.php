@@ -25,7 +25,7 @@ class UserPantiController extends Controller
 
     public function store(Request $request)
     {
-      $this->validate($request, [
+      /*$this->validate($request, [
         'nama_panti' => 'required|string|max:255',
         'email_panti' => 'required|string|email|max:255|unique:user_pantis',
         'password' => 'required|string|min:6|confirmed',
@@ -35,7 +35,7 @@ class UserPantiController extends Controller
         'nama_pemilik' => 'required|string',
         'kontak_panti' => 'required|string',
         'foto' => 'required|image|mimes:jpeg, png, jpg, gif, svg',
-      ]);
+      ]);*/
 
       $user_pantis = new userPanti;
 
@@ -58,6 +58,6 @@ class UserPantiController extends Controller
 
       //$user_pantis = userPanti::create(request(['nama_panti', 'email_panti', 'password_panti', 'alamat_panti', 'kondisi_panti', 'jml_penghuni', 'nama_pemilik', 'kondisi_panti', 'kontak_panti']));
 
-      return redirect()->back()->with('Register berhasil!');
+      return redirect('/');
     }
 }
