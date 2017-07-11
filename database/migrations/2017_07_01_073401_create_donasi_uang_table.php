@@ -24,24 +24,6 @@ class CreateDonasiUangTable extends Migration
             $table->integer('donasi_id');
             $table->timestamps();
         });
-
-        Schema::table('donasi_uang', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users')
-                        ->onDelete('restrict')
-                        ->onUpdate('restrict');
-        });
-
-        Schema::table('donasi_uang', function (Blueprint $table) {
-            $table->foreign('pembayaran_id')->references('id')->on('pembayaran')
-                        ->onDelete('restrict')
-                        ->onUpdate('restrict');
-        });
-
-        Schema::table('donasi_uang', function (Blueprint $table) {
-            $table->foreign('donasi_id')->references('id')->on('donasi')
-                        ->onDelete('restrict')
-                        ->onUpdate('restrict');
-        });
     }
 
     /**
@@ -49,20 +31,5 @@ class CreateDonasiUangTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::table('donasi_uang', function (Blueprint $table) {
-            $table->dropForeign('donasi_uang_user_id_foreign');
-        });
-
-        Schema::table('donasi_uang', function (Blueprint $table) {
-            $table->dropForeign('donasi_uang_pembayaran_id_foreign');
-        });
-
-        Schema::table('donasi_uang', function (Blueprint $table) {
-            $table->dropForeign('donasi_uang_donasi_id_foreign');
-        });
-
-        Schema::dropIfExists('donasi_uang');
-    }
+   
 }
