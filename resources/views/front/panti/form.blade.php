@@ -4,74 +4,68 @@
 <div class="row	">
           <div class="col-lg-6 col-centered">
             <div class="well bs-component">
-		<form method="POST" action=/userPanti class="form-horizontal">
-      <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
-      <fieldset>
+		<form class="form-horizontal">
+		  <fieldset>
 		    <legend>Register Panti</legend>
-
-        <div class="form-group">
+		    <div class="form-group">
 		      <label for="nama_panti" class="col-lg-2 control-label">Nama Panti</label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" name="nama_panti" placeholder="Nama Panti" >
+		        <input class="form-control" id="nama_panti" placeholder="Nama Panti" type="text">
 		      </div>
 		    </div>
-
-        <div class="form-group">
-		      <label for="email_panti" class="col-lg-2 control-label">Email Panti</label>
+		    <div class="form-group">
+		      <label for="inputEmail" class="col-lg-2 control-label">Email Panti</label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" name="email_panti" placeholder="Email Panti">
+		        <input class="form-control" id="email_panti" placeholder="Email Panti" type="text">
 		      </div>
 		    </div>
-
 		    <div class="form-group">
 		      <label for="password_panti" class="col-lg-2 control-label">Password</label>
 		      <div class="col-lg-10">
-		        <input type="password" class="form-control" name="password_panti" placeholder="Password">
+		        <input class="form-control" id="password_panti" placeholder="Password" type="password">
 		      </div>
 		    </div>
-
 		    <div class="form-group">
 		      <label for="alamat_panti" class="col-lg-2 control-label">Alamat Panti</label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" name="alamat_panti" placeholder="Alamat Panti">
+		        <input class="form-control" id="alamat_panti" placeholder="Alamat Panti" type="text">
 		      </div>
 		    </div>
-
+		    <div class="form-group">
+			  	<label for="alamat_panti" class="col-lg-2 control-label">Foto Panti</label>		
+				<input class="col-lg-10" type="file" name="foto" required>	
+			</div>
 		    <div class="form-group">
 		      <label for="kondisi_panti" class="col-lg-2 control-label">Kondisi Panti</label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" name="kondisi_panti" placeholder="Kondisi Panti">
+		        <input class="form-control" id="kondisi_panti" placeholder="Kondisi Panti" type="text">
 		      </div>
 		    </div>
-
 		    <div class="form-group">
 		      <label for="jml_penghuni" class="col-lg-2 control-label">Jumlah Penghuni</label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" name="jml_penghuni" placeholder="Jumlah Penghuni">
+		        <input class="form-control" id="jml_penghuni" placeholder="Jumlah Penghuni" type="text">
 		      </div>
 		    </div>
-
 		    <div class="form-group">
 		      <label for="nama_pemilik" class="col-lg-2 control-label">Nama Pemilik</label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" name="nama_pemilik" placeholder="Nama Pemilik">
+		        <input class="form-control" id="nama_pemilik" placeholder="Nama Pemilik" type="text">
 		      </div>
 		    </div>
-
 		    <div class="form-group">
 		      <label for="kontak_panti" class="col-lg-2 control-label">Kontak Panti</label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" name="kontak_panti" placeholder="Kontak Panti">
+		        <input class="form-control" id="kontak_panti" placeholder="Kontak Panti" type="text">
 		      </div>
 		    </div>
-
 		    <div class="form-group">
 		      <div class="col-lg-10 col-lg-offset-2">
-            <button type="submit" class="btn btn-primary">Register</button>
-		        <a routerLink="register">Login</a>
+		        <a routerLink="register">Register</a>
+		        <button type="submit" class="btn btn-primary">Login</button>
 		      </div>
 		    </div>
-
+		    
 		  </fieldset>
 		</form>
 	  </div>
