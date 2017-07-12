@@ -16,7 +16,7 @@ class User extends Authenticatable
         'nama', 'email', 'password',
     ];
 
-    protected $connection = 'mysql';
+    //protected $connection = 'mysql';
 
     /**
      * The attributes that should be hidden for arrays.

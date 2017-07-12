@@ -2,25 +2,84 @@
 @section('main')
 
 <div class="jumbotron">
-<div class="container text-center jumbotron-text">
-  <h2 class="text-50">Ayo lestarikan panti</h2>
-  <h2 class="text-50">Untuk masa depan bangsa</h2>
-  <br>
-  <h3>“Sesungguhnya tidak akan berkurang harta yang disedekahkan, kecuali bertambah dan bertambah”</h3>
-  <h4>(HR. Tirmidzi)</h4>
-  <br><br>
+<div class="container text-center">
+  <h1>Panti</h1>
+  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
   <p><a href="../register" class="btn btn-primary btn-lg">Gabung</a></p>
 </div>
 </div>
 
-<br><br><br>
 
 <div class="container">
+<div class="row">
+  <div class="col-sm-8">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
 
-<blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. khiuril iulrsilji lklji io99uoi wwwiuworbashuidk uhkjhih hiuhikjh hjihhuiuh</p>
-  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-</blockquote>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="https://placehold.it/800x400?text=IMAGE" alt="Image">
+          <div class="carousel-caption">
+            
+          </div>      
+        </div>
+
+        <div class="item">
+          <img src="https://placehold.it/800x400?text=Another Image Maybe" alt="Image">
+          <div class="carousel-caption">
+            
+          </div>      
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="well">
+      <p>
+
+Raw denim you probably haven't heard of them 
+jean shorts Austin. Nesciunt tofu stumptown 
+aliqua, retro synth master cleanse. Mustache 
+cliche tempor, williamsburg carles vegan 
+helvetica. Reprehenderit butcher retro keffiyeh 
+dreamcatcher synth. Cosby sweater eu banh mi, 
+qui irure terry richardson ex squid. Aliquip 
+placeat salvia cillum iphone. Seitan aliquip 
+quis cardigan american apparel, butcher 
+voluptate nisi qui.
+Food truck fixie locavore, accusamus mcsweeney's 
+marfa nulla single-origin coffee squid. 
+Exercitation +1 labore velit, blog sartorial 
+PBR leggings next level wes anderson artisan 
+four loko farm-to-table craft beer twee.
+Qui photo booth letterpress, commodo enim craft 
+beer mlkshk aliquip jean shorts ullamco ad vinyl 
+cillum PBR.
+
+	</p>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+  
+
+
 
 <div class="container text-center">  
 
@@ -115,7 +174,7 @@
 
 
 
-<hr>
+
 
 <div class="container text-center">  
 
@@ -129,7 +188,7 @@
     </div>
     <div class="col-sm-3">
     <a href="../regispanti" class="btn btn-primary pull-right">
-    <h4>Buat Donasi</h4></a>
+    <h4  >Buat Donasi</h4></a>
       
     </div>
   </div>
@@ -158,7 +217,7 @@
     <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
   </div>
   <div class="tab-pane fade active in" id="profile">
-   
+	 
 
 <br>
 
@@ -207,8 +266,5 @@
 </div>
 </div>
 <br>
-<br>  
-
-</div>
-
+<br>
 @endsection

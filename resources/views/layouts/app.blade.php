@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.nama', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.nama', 'Laravel') }}
+                        {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
 
@@ -48,7 +48,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->nama }} <span class="caret"></span>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">

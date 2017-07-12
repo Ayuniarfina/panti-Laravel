@@ -1,42 +1,68 @@
-@extends('front.template')
+@extends('layouts.app')
 
-@section('main')
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                        {{ csrf_field() }}
 
-<div class="row ">
-          <div class="col-lg-6 col-centered">
-            <div class="well bs-component">
-        <form name="form" class="form-horizontal"(ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
-          <fieldset>
-            <legend>Login</legend>
-            <div class="form-group" [ngClass]="{'has-error': f.submitted && !username.valid}">
-              <label for="username" class="col-lg-2 control-label">Username</label>
-              <div class="col-lg-10">
-                <input class="form-control" name="username" type="text" required>
-              </div>
-              <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required           
-              </div>
-            </div>
-            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
-              <label for="password" class="col-lg-2 control-label">Password</label>
-              <div class="col-lg-10">
-                <input class="form-control" name="password" type="password" required>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> Checkbox
-                  </label>
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-              </div>
             </div>
-            
-            <div class="form-group">
-            <button [disabled]="loading" class="btn btn-primary">Login</button>
-            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-            <a [routerLink]="['/register']" class="btn btn-link">Register</a>
         </div>
-          </fieldset>
-        </form>
-      </div>
     </div>
 </div>
 @endsection
-
